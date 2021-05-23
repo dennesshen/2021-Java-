@@ -13,8 +13,9 @@ public class ParallelExample5 {
         int x = (int)Math.pow(10, 7);
         long count = Stream.iterate(0, n -> n+1)
                 .limit(x)
-                //.parallel()
+                .parallel()
                 .filter(t -> isPrime(t))
+                .sequential()
                 .peek(t ->System.out.println(t))
                 .count();
         
@@ -30,3 +31,7 @@ public class ParallelExample5 {
     }
 
 }
+
+
+//倒數計時器
+//Febonacci java8處理
