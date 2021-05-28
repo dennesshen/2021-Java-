@@ -27,9 +27,8 @@ public class FileReaderDemo {
 //            System.out.println(Arrays.toString(buffer));
 //            fr.read(buffer);
 //            System.out.println(Arrays.toString(buffer));
-            while (fr.read(buffer) !=-1) {    
+            while (fr.read(buffer) != -1) {
                 System.out.print(buffer[0]);
-                
             }
 
         } catch (IOException e) {
